@@ -5,7 +5,8 @@ const error = require('./utilities/error');
 const bodyParser = require('body-parser');
 const pug = require('pug');
 const fs = require('fs');
-//all my global variables including
+const builds = require('./routes/builds')
+//all my global variables 
 
 //middleware so bodyparser works
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,6 +32,8 @@ app.use((req, res, next) => {
 app.set("views", "./views");
 app.set('view engine', 'pug');
 
+//accessing my different routes
+app.use('/builds', builds)
 
 //basic home page loads pug index view
 app.get('/', (req, res) => {
