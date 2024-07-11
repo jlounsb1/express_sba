@@ -11,12 +11,12 @@ html(lang="en")
         -const buildsList = builds
         -console.log(buildsList)
         for build, i in buildsList
-            h3= "Build Number " + (i+1)
-            p= build.name 
-            p= build.Purpose 
-            p= build.Style
-            p= build.gear
-            p= build.comments
+            h3= "Build Number: " + (i+1)
+            p= "Name: " + build.name 
+            p= "Build Purpose: " + build.Purpose 
+            p= "PlayStyle: " + build.Style
+            p= "Important Gear: " + build.gear
+            p= "Build Comments: " + build.comments
             br
         a(href="/")
             button home

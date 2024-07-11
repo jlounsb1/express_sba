@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        link(href='/styles.css', rel='stylesheet')
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        h1 Builds Page
+        h3 Build Information
+        h3 Build Number: #{build.id}
+        p Name: #{build.name}
+        p Build Purpose: #{build.Purpose} 
+        p PlayStyle: #{build.Style}
+        p Important Gear: #{build.gear}
+        p Build Comments: #{build.comments}
+        br
+        a(href="/")
+            button home
