@@ -2,7 +2,9 @@
 
 const builds = [
     {
-
+        name:"Frost Blades Trickster",
+        Purpose: "clear",
+        Style:"melee ish"
     }
 ]
 
