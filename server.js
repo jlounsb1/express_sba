@@ -5,23 +5,32 @@ const error = require('./utilities/error');
 const bodyParser = require('body-parser');
 const pug = require('pug');
 const fs = require('fs');
-const logReq = function(req, res, next) {
-    console.log('you did something')
-    next();
-}
-//all my global variables including requirements and middleware logging function
+//all my global variables including
 
 //middleware so bodyparser works
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
 
-//loads stylesheet capabilities and logs simple response middleware
-app.use(logReq)
+//loads stylesheet capabilities and logs simple response middleware pulled from a previous exercise
 app.use(express.static('styles'))
+app.use((req, res, next) => {
+    const time = new Date();
+  
+    console.log(
+      `-----
+  ${time.toLocaleTimeString()}: Received a ${req.method} request to ${req.url}.`
+    );
+    if (Object.keys(req.body).length > 0) {
+      console.log("Containing the data:");
+      console.log(`${JSON.stringify(req.body)}`);
+    }
+    next();
+  });
 
 //needed for pug to work
 app.set("views", "./views");
 app.set('view engine', 'pug');
+
 
 //basic home page loads pug index view
 app.get('/', (req, res) => {
