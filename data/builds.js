@@ -9,14 +9,20 @@
 
 const builds = [
     {
+        Id:1,
         name:"Frost Blades Trickster",
         Purpose: "clear",
-        Style:"melee ish"
+        Style:"melee ish",
+        gear: "good Imperial Claw, headhunter, Lightning Coil",
+        comments: "I love me some ice zoom zoom"
     },
     {
+        Id:2,
         name:"RF Jugg",
         Purpose: "clear",
-        Style:"Walking Simulator"
+        Style:"Walking Simulator",
+        gear: "All rares and your fine",
+        comments: "Boring but one of the tankiest builds in the game"
     }
 ]
 
