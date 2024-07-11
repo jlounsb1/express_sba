@@ -6,8 +6,15 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
     body 
-    h1 Builds Page
-    h3 build data
-        p #{buildsinfo}
-    a(href="/")
-        button home
+        h1 Builds Page
+        h3 Build Information
+        -const buildsList = builds
+        -console.log(buildsList)
+        for build, i in buildsList
+            h3= "Build Number " + (i+1)
+            p= build.name 
+            p= build.Purpose 
+            p= build.Style
+            br
+        a(href="/")
+            button home
