@@ -23,6 +23,15 @@ const builds = [
         Style:"Walking Simulator",
         gear: "All rares and your fine",
         comments: "Boring but one of the tankiest builds in the game"
+    },
+    {
+        id:2,
+        name:"Flicker Strike Trickster",
+        Purpose: "clear",
+        Style:"melee zooms",
+        gear: "ephermeral edge corrupted with resolute technique, headhunter, evasion chestpiece",
+        comments: "Uses Chaos innoculation, so needs to get es all over to be viable."
+
     }
 ]
 
