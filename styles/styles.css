@@ -16,3 +16,8 @@ button:hover {
     cursor:pointer;
   
 }
+
+hr{
+    width:50%;
+    float:left;
+}

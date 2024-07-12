@@ -1,5 +1,15 @@
-I set up a basic express server using Pug.
+Set up an express server to create a build categorization site for the video game Path of Exile.
 
-I am still trying to decide what project I want to do, but I set up the basic utility of the server.
+Used Pug to set up views to display information and handle navigation.
 
-I am jotting my thoughts down in the index pug file. Will update readme when I have a better idea.
+These include a home page, a build list, a page for selected specific build, and a submission page.
+
+I used a data folder in the express application for build information and player information.  It is rough data to just simulate having a database, and have something for the server to point to and render data from.
+
+I also set up a utilities folder for error handling middleware.
+
+There is a very basic styles folder linked for basic styling
+
+Used express, body-parser, fs, nodemon, and pug as dependencies in the package.json.
+
+Have a public folder where I can point to images, etc.
