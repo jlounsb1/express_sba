@@ -3,3 +3,16 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color:antiquewhite;
 }
+
+button {
+    padding:20px;
+    border-radius: 10px;
+    font-size: larger;
+    background-color:bisque;
+    margin-right:20px;
+}
+button:hover {
+    opacity:85%;
+    cursor:pointer;
+  
+}
