@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
         'index'
     )
 })
-
+//post request to set up the json for a new user
 app.post('/', (req, res) =>{
   res.json({
       "siteUserName": req.body.siteUserName,
@@ -53,7 +53,7 @@ app.post('/', (req, res) =>{
       "playTimeHrs": req.body.playTimeHrs,
       "AccountPublic": req.body.AccountPublic,
       "userId": players.length+1
-  })
+  });
 })
 
 
@@ -76,8 +76,6 @@ app.listen(port, ()=>{
 
 //I still need to set up the following thngs to hit all the reqwuirements:
     //incorporate a get route for players.js data
-
-    //use post route
 
     //use patch or put
 
