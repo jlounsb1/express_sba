@@ -5,10 +5,13 @@
 //playtimeHrs:
 //AccountPublic
 //
+//fake login credentials
 
 const players = [
     {
-        username: 'Smerg',
+        userName: 'Radar',
+        password:'merp',
+        PoeUserName: 'Smerg',
         userId: 0,
         playTimeHrs: 5000,
         AccountPublic: true

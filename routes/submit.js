@@ -7,10 +7,9 @@ const players = require('../data/players');
 router
     .route('/')
     .get((req, res)=>{
-        let buildsList = builds;
         res.render(
-            'submit',
-            {}
+            'submit'
+            
         )
            
     })
