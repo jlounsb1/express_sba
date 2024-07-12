@@ -11,10 +11,37 @@ html(lang="en")
         p This is a simple version of the extensive site that uses poe's open api to display massive build information,
             a(href="https://poe.ninja/builds/necropolis", target="_blank") PoeNinja.
         br
-        form(action="/submit", method="post")
-            input(type="submit", value="bonk")
-        br
         a(href="/")
             button Home
         a(href="/builds")
             button Build list
+        br
+        br
+        form(action="/submit", method="post")
+            label(name="POEUsername") Poe Username: 
+            input(type="text", name="POE Username")
+            br
+            br
+            label(name="buildname") Build Name: 
+            input(type="text", name="buildname")
+            br
+            br
+            label(name="purpose") Purpose: 
+            input(type="text", name="purpose")
+            br
+            br
+            label(name="style") Style: 
+            input(type="text", name="style")
+            br
+            br
+            label(name="gear") Gear Used: 
+            input(type="text", name="gear")
+            br
+            br
+            label(name="comments") Comments: 
+            input(type="text", name="comments")
+            br
+            br
+            label(Submit Your Build: )
+            input(type="submit", name="submit", value="Submit")
+        br

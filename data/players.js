@@ -9,7 +9,7 @@
 
 const players = [
     {
-        userName: 'Radar',
+        siteUserName: 'Radar',
         password:'merp',
         PoeUserName: 'Smerg',
         userId: 0,

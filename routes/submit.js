@@ -14,8 +14,14 @@ router
            
     })
     .post((req, res) =>{
+        console.log(req.body)
         res.json({
-            test: 'reponse'
+            "Id": builds.length +1,
+            "name": req.body.buildname,
+            "Purpose": req.body.purpose,
+            "Style": req.body.style,
+            "gear": req.body.gear,
+            "comments": req.body.comments
         })
     })
 module.exports = router;
