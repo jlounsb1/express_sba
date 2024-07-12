@@ -13,5 +13,9 @@ router
         )
            
     })
-
+    .post((req, res) =>{
+        res.json({
+            test: 'reponse'
+        })
+    })
 module.exports = router;
