@@ -7,6 +7,7 @@ const pug = require('pug');
 const fs = require('fs');
 const builds = require('./routes/builds')
 const submit = require('./routes/submit')
+const players = require('./data/players');
 //all my global variables 
 
 //middleware so bodyparser works
@@ -42,6 +43,17 @@ app.get('/', (req, res) => {
     res.render(
         'index'
     )
+})
+
+app.post('/', (req, res) =>{
+  res.json({
+      "siteUserName": req.body.siteUserName,
+      "password": req.body.password,
+      "PoeUserName": req.body.PoeUserName,
+      "playTimeHrs": req.body.playTimeHrs,
+      "AccountPublic": req.body.AccountPublic,
+      "userId": players.length+1
+  })
 })
 
 

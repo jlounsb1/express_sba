@@ -12,7 +12,7 @@ const players = [
         siteUserName: 'Radar',
         password:'merp',
         PoeUserName: 'Smerg',
-        userId: 0,
+        userId: 1,
         playTimeHrs: 5000,
         AccountPublic: true
     }
