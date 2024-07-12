@@ -8,6 +8,8 @@ html(lang="en")
     body 
         h1 Builds Page
         h3 Build Information
+        hr
+        br
         -const buildsList = builds
         //- -console.log(buildsList)
         for build, i in buildsList
@@ -17,6 +19,10 @@ html(lang="en")
             p= "PlayStyle: " + build.Style
             p= "Important Gear: " + build.gear
             p= "Build Comments: " + build.comments
+            a(href=`/builds/${build.Id}`)
+                button More Information
+            br
+            hr
             br
         a(href="/")
             button home
