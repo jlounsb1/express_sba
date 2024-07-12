@@ -6,17 +6,13 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title My Poe Build Tracker
     body 
-        h1 So if I do a poe build tracking program, what pieces of information should i set up?
-        ul
-            li build information. I would put the information json in the data folder, then have a view and a route 
-            li comments. I could have comments associated with the build, and set up a way to load them in when you select a certain build 
-            li users? Maybe I could set up a space where you can set up users, so users can input their own builds and comment on others?
+        h1 Submit your build on this page
         p I am considering doing something similar for my final project.  In the game you can make custom hideouts, and import other peoples.  I could set up a app to organize, store, and share hideouts.
         p This is a simple version of the extensive site that uses poe's open api to display massive build information,
             a(href="https://poe.ninja/builds/necropolis", target="_blank") PoeNinja.
         br
         br
+        a(href="/")
+            button Home
         a(href="/builds")
-            button Builds
-        a(href="/submit")
-            button Submit your own
+            button Build list

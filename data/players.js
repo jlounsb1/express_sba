@@ -15,4 +15,4 @@ const players = [
     }
 ]
 
-modules.export = players
+module.exports = players
