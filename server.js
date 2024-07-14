@@ -75,11 +75,3 @@ app.use((err, req, res, next) => {
 app.listen(port, ()=>{
     console.log(`server is listening at port ${port}`)
 })
-
-
-//I still need to set up the following thngs to hit all the reqwuirements:
-    //use patch or put
-
-    //use delete route
-
-    //use query parameters

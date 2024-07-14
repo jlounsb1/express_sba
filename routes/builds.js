@@ -36,8 +36,15 @@ router
         let buildNumber = req.params.id
         let build = builds[(buildNumber-1)];
         console.log(`recieved a put request to update build ${req.params.id}, ${build.name}.`)
-        res.send(`received a put request for build ${req.params.id}, ${build.name}.`)
-        //I am having the same problem as the delete request with the put
+        res.json({
+            "Id": builds.length +1,
+            "name": req.body.buildname,
+            "Purpose": req.body.purpose,
+            "Style": req.body.style,
+            "gear": req.body.gear,
+            "comments": req.body.comments
+        })
+        //This information would be submitted in the form on the pug page, but I cannot seem to get the two to connect properly.
     });
     
     

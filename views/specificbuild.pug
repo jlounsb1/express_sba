@@ -15,7 +15,34 @@ html(lang="en")
         p Important Gear: #{build.gear}
         p Build Comments: #{build.comments}
         form(action=`/`, method="DELETE")
-            button(type='submit') Delete
+            input(type='submit', name='Delete', value='Delete')
+        br
+        form(action="/", method="PUT")
+            br
+            label(name="name") New Build Name: 
+            input(type="text", name="name")
+            br
+            br
+            label(name="purpose") New Purpose: 
+            input(type="text", name="purpose")
+            br
+            br
+            label(name="style") New Style: 
+            input(type="text", name="style")
+            br
+            br
+            label(name="gear") New Gear Used: 
+            input(type="text", name="gear")
+            br
+            br
+            label(name="comments") New Comments: 
+            input(type="text", name="comments")
+            br
+            br
+            label(Update Your Build: )
+            input(type="submit", name="update", value="Update")
+        br
+        hr
         br
         a(href="/")
             button Home
