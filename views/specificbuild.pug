@@ -4,7 +4,7 @@ html(lang="en")
         link(href='/styles.css', rel='stylesheet')
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title My Poe Tracker
     body 
         h1 Builds Page
         h3 Build Information
@@ -14,6 +14,8 @@ html(lang="en")
         p PlayStyle: #{build.Style}
         p Important Gear: #{build.gear}
         p Build Comments: #{build.comments}
+        form(action=`/`, method="DELETE")
+            button(type='submit') Delete
         br
         a(href="/")
             button Home
