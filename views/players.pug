@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        link(href='/styles.css', rel='stylesheet')
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title My Poe Build Tracker
+    body 
+        h1 Players Page
+        h3 Player Information
+        hr
+        br
+        -const playersList = players
+        for player, i in playersList
+            h3= "Player: " + player.PoeUserName 
+            p= "Play Time in Hours: " + player.playTimeHrs 
+            p= "Is their Poe Account public?: " + player.AccountPublic
+            a(href=`/players/${player.userId}`)
+                button More information
+            br
+            hr
+            br

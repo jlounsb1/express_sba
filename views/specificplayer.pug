@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        link(href='/styles.css', rel='stylesheet')
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        h1 Player information page
+        h3 Player Information
+        h3= "Player: " + player.PoeUserName 
+        p= "Play Time in Hours: " + player.playTimeHrs 
+        p= "Is their Poe Account public?: " + player.AccountPublic
+        br
+        p="This site Username: " + player.siteUserName
+        p="This site Password: " + player.password
+        br
+        p I would not actually set up a site like this to diplay login information so easily, it is just practice for pulling information. 
+        a(href="/")
+            button Home
+        a(href="/players")
+            button Back

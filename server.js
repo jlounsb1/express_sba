@@ -7,7 +7,9 @@ const pug = require('pug');
 const fs = require('fs');
 const builds = require('./routes/builds')
 const submit = require('./routes/submit')
-const players = require('./data/players');
+const players = require('./routes/players');
+const playersData = require('./data/players')
+
 //all my global variables 
 
 //middleware so bodyparser works
@@ -37,6 +39,7 @@ app.set('view engine', 'pug');
 //accessing my different routes
 app.use('/builds', builds)
 app.use('/submit', submit)
+app.use("/players", players)
 
 //basic home page loads pug index view
 app.get('/', (req, res) => {
@@ -52,7 +55,7 @@ app.post('/', (req, res) =>{
       "PoeUserName": req.body.PoeUserName,
       "playTimeHrs": req.body.playTimeHrs,
       "AccountPublic": req.body.AccountPublic,
-      "userId": players.length+1
+      "userId": playersData.length+1
   });
 })
 
@@ -75,8 +78,6 @@ app.listen(port, ()=>{
 
 
 //I still need to set up the following thngs to hit all the reqwuirements:
-    //incorporate a get route for players.js data
-
     //use patch or put
 
     //use delete route
