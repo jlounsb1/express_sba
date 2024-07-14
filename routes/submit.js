@@ -1,8 +1,6 @@
 const express = require('express');
 const router= express.Router();
 const builds = require('../data/builds');
-const players = require('../data/players');
-
 
 router
     .route('/')
@@ -24,4 +22,5 @@ router
             "comments": req.body.comments
         })
     })
+
 module.exports = router;

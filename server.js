@@ -9,7 +9,6 @@ const builds = require('./routes/builds')
 const submit = require('./routes/submit')
 const players = require('./routes/players');
 const playersData = require('./data/players')
-
 //all my global variables 
 
 //middleware so bodyparser works
@@ -71,7 +70,7 @@ app.use((err, req, res, next) => {
     res.json({ error: err.message });
 })
 
-
+//activate server listening at selected port
 app.listen(port, ()=>{
     console.log(`server is listening at port ${port}`)
 })
